@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>删除</th>
+        </tr>
+        <tr th:each="s : ${stuList}">
+            <td th:text="${s.id}"></td>
+            <td th:text="${s.username}"></td>
+            <td th:text="${s.password}"></td>
+            <td><a th:href="|/stu/del/${s.id}|">删除</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
