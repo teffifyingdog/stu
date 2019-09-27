@@ -23,6 +23,8 @@ public class ControllerStu {
     public String getStuList(ModelMap mm){
         List<Stu> stuList = stuService.list();
         mm.put("stuList",stuList);
+        System.out.println("???");
+        System.out.println("???");
         return "StuList";
     }
 
